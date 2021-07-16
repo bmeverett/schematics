@@ -126,6 +126,7 @@ function generate(options: ResourceOptions): Source {
           );
         },
         singular: (name: string) => pluralize.singular(name),
+        plural: (name: string) => pluralize(name),
         ent: (name: string) => name + '.entity',
       }),
       move(options.path),

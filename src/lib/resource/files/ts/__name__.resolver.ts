@@ -13,7 +13,7 @@ export class <%= classify(name) %>Resolver {
     return this.<%= lowercased(name) %>Service.create(create<%= singular(classify(name)) %>Input);
   }
 
-  @Query(() => [<%= singular(classify(name)) %>], { name: '<%= lowercased(classify(name)) %>' })
+  @Query(() => [<%= singular(classify(name)) %>], { name: '<%= lowercased(plural(classify(name))) %>' })
   findAll() {
     return this.<%= lowercased(name) %>Service.findAll();
   }
